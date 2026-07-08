@@ -17,8 +17,7 @@ from dotenv import load_dotenv
 from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_groq import ChatGroq
-from langchain.prompts import ChatPromptTemplate
-
+from langchain_core.prompts import ChatPromptTemplate
 load_dotenv()
 
 INDEX_DIR = "faiss_index"
