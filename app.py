@@ -36,9 +36,28 @@ Answer clearly and concisely:"""
 
 @st.cache_resource
 def load_vectorstore():
-    embeddings = FastEmbedEmbeddings()
-    return FAISS.load_local(INDEX_DIR, embeddings, allow_dangerous_deserialization=True)
+    from langchain_community.document_loaders import DirectoryLoader, TextLoader, PyPDFLoader
+    from langchain.text_splitter import RecursiveCharacterTextSplitter
 
+    embeddings = FastEmbedEmbeddings()
+
+    if os.path.exists(INDEX_DIR):
+        return FAISS.load_local(INDEX_DIR, embeddings, allow_dangerous_deserialization=True)
+
+    # No index found on disk (e.g. first run on Streamlit Cloud) — build it now
+    with st.spinner("Building vector index for the first time... this may take a minute."):
+        docs = []
+        txt_loader = DirectoryLoader("data/sample_docs", glob="**/*.txt", loader_cls=TextLoader)
+        docs.extend(txt_loader.load())
+        pdf_loader = DirectoryLoader("data/sample_docs", glob="**/*.pdf", loader_cls=PyPDFLoader)
+        docs.extend(pdf_loader.load())
+
+        splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100)
+        chunks = splitter.split_documents(docs)
+
+        vectorstore = FAISS.from_documents(chunks, embeddings)
+        vectorstore.save_local(INDEX_DIR)
+        return vectorstore
 
 @st.cache_resource
 def load_llm():
@@ -54,9 +73,7 @@ def main():
     st.title("⚽ Pitchside AI.")
     st.caption("Your AI expert on football rules, VAR regulations, and match analysis.")
 
-    if not os.path.exists(INDEX_DIR):
-        st.warning("No vector index found. Run `python ingest.py` first, then reload this page.")
-        st.stop()
+    
 
     vectorstore = load_vectorstore()
     llm = load_llm()
