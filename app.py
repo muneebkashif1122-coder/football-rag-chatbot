@@ -37,7 +37,7 @@ Answer clearly and concisely:"""
 @st.cache_resource
 def load_vectorstore():
     from langchain_community.document_loaders import DirectoryLoader, TextLoader, PyPDFLoader
-    from langchain.text_splitter import RecursiveCharacterTextSplitter
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
 
     embeddings = FastEmbedEmbeddings()
 
