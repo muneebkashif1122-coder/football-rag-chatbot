@@ -1,0 +1,22 @@
+Football (Soccer) Rules: The Basics
+
+Objective
+Two teams of 11 players try to score more goals than the opponent by getting the ball into the opposing team's net. A standard match lasts 90 minutes, split into two 45-minute halves, with a short break in between. Extra time and injury-time minutes are added by the referee to make up for stoppages.
+
+The Offside Rule
+This is the rule most beginners find confusing. An attacking player is offside if, at the moment the ball is passed to them, they are nearer to the opponent's goal line than both the ball and the second-last opponent (usually the last defender, since the goalkeeper is often the last one). Simply put: you cannot be standing behind the entire defense waiting for a pass when the ball is played to you. Being offside is only penalized if the player is involved in active play at that moment — not just standing in an offside position.
+
+Fouls and Cards
+A yellow card is a caution, given for reckless but not violent fouls, unsporting behavior, or persistent rule-breaking. Two yellow cards in the same match result in a red card. A red card is a direct dismissal for serious foul play or violent conduct, and that player cannot be replaced — their team plays the rest of the match with one fewer player.
+
+Free Kicks and Penalties
+A direct free kick is awarded for more serious fouls (e.g., tripping, pushing) and can be shot directly at goal. An indirect free kick (for offenses like offside or dangerous play) must touch another player before a goal can count. A penalty kick is awarded when a foul is committed by the defending team inside their own penalty box, taken from a fixed spot 12 yards from goal, with only the goalkeeper defending.
+
+Throw-ins, Goal Kicks, and Corners
+When the ball fully crosses the sideline, the team that didn't touch it last restarts play with a throw-in. When the ball crosses the goal line after last being touched by an attacker, the defending team restarts with a goal kick. When the ball crosses the goal line after last being touched by a defender, the attacking team restarts with a corner kick from the nearest corner flag.
+
+Extra Time and Penalty Shootouts
+In knockout-stage matches (as opposed to league matches, which can end in a draw), if the score is level after 90 minutes, two 15-minute periods of extra time are played. If still level, the match is decided by a penalty shootout: each team takes alternating penalty kicks until a winner emerges.
+
+VAR (Video Assistant Referee)
+Introduced in top-level football in 2018, VAR allows off-field officials to review key decisions — goals, penalties, red cards, and cases of mistaken identity — using video replays, correcting clear and obvious errors made on the field.
